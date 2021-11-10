@@ -20,7 +20,7 @@
     "configuration": {
         "API Key": {
             "description": "Pulsedive API key",
-            "data_type": "string",
+            "data_type": "password",
             "required": true,
             "value_list": [],
             "default": "",
@@ -437,7 +437,18 @@
             "verbose": "Retrieve all information about an indicator, if the indicator is available in Pulsedive.  \n\nFor more information, please see the Pulsedive documentation: https://pulsedive.com/api/indicators",
             "type": "investigate",
             "read_only": true,
-            "parameters": {},
+            "parameters": {
+                "indicator": {
+                    "description": "indicator",
+                    "data_type": "string",
+                    "required": true,
+                    "primary": true,
+                    "contains": [],
+                    "value_list": [],
+                    "default": "",
+                    "order": 0
+                }
+            },
             "output": [
                 {
                     "data_path": "action_result.status",

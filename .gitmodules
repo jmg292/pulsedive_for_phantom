@@ -1,0 +1,3 @@
+[submodule "pypulsedive"]
+	path = pypulsedive
+	url = https://github.com/jmg292/pypulsedive

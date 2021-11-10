@@ -17,6 +17,7 @@ from phantom.action_result import ActionResult
 import requests
 import json
 from bs4 import BeautifulSoup
+import pypulsedive
 
 
 class RetVal(tuple):
@@ -583,6 +584,8 @@ class PulsediveApiConnector(BaseConnector):
         """
 
         self._base_url = config.get('base_url')
+        pypulsedive.configuration.api_key = config.get('API Key')
+
 
         return phantom.APP_SUCCESS
 
